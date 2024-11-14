@@ -1,0 +1,548 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.header-nav a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Try button */
+.try-button {
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  padding: 40px;
+  background: linear-gradient(to right, #e0f7fa, #fff);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.video-player:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trust-text, .sponsors {
+  color: #999;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.hero-description {
+  color: #666;
+  margin: 20px 0;
+}
+
+.search-input {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.sponsors img {
+  margin: 0 10px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Add a down arrow icon to the links */
+.dropdown a::after {
+  content: ' ▼';
+  font-size: 0.8rem;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* When hovering over the link, rotate the arrow */
+.dropdown:hover a::after {
+  transform: rotate(180deg);
+}
+
+/* Enhanced dropdown styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+}
+
+/* Styling for each dropdown item */
+.dropdown-content a {
+  padding: 12px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none; /* Remove border on the last item */
+}
+
+.dropdown-content a:hover {
+  background-color: #f4f4f4;
+  color: #ff6b00; /* Highlight with brand color */
+}
+
+/* Tutorials Section Styles */
+.tutorials-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tutorials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Tutorial Card Styles */
+.tutorial-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.tutorial-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tutorial-info {
+  padding: 20px;
+}
+
+.rating {
+  color: #ff6b00;
+  font-size: 0.9rem;
+}
+
+.tutorial-title {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.students-count {
+  color: #777;
+}
+
+
+.stats-section {
+  padding: 40px;
+  /* background-color: #f4f4f4; */
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 40px; /* Space between the columns */
+  align-items: center; /* Vertically align items */
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns for the stat cards */
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: white;
+  padding: 20px;
+  border-top: 4px solid;
+  /* border: 2px solid transparent; */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.stats-section .stats-box{
+  background-color: #f4f4f4;
+  width: 600px !important;
+  height: 400px !important;
+  position: absolute;
+  border-radius: 30px !important;
+  left: -100px;
+  z-index: -1;
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.feature-text {
+  max-width: 500px;
+}
+
+.feature-title {
+  color: #ff6b00;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.feature-text h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.feature-text p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.explore-button {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.explore-button:hover {
+  background-color: #1d8bd2;
+}
+
+.popular-courses-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the course cards */
+  gap: 20px;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center; /* Align items horizontally within the card */
+  width: 90%; /* Adjust width to be centered within the container */
+  max-width: 800px;
+}
+
+.video-icon {
+  margin-right: 15px; /* Spacing between icon and course info */
+}
+
+.course-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Align text to the left within each card */
+  width: 100%;
+}
+
+.rating {
+  color: #ff6b00;
+  font-size: 1rem;
+}
+
+.course-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.course-students {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Center eye icon with text */
+}
+
+.course-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.course-features p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+.course-features {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1s ease-out, opacity 1s ease-out;
+}
+
+.course-features.open {
+  max-height: 500px;  /* Adjust this value if necessary */
+  opacity: 1;
+}
+
+
+.course-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.course-button {
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.course-duration {
+  color: #333;
+  font-weight: bold;
+}
+.faq-section {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq-heading {
+  font-size: 14px;
+  color: #ff914d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.faq-subheading {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question .icon {
+  margin-right: 10px;
+  color: #00c853;
+  font-size: 18px;
+}
+
+.faq-answer {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .hero-content, .hero-video {
+      width: 100%;
+      padding: 0;
+  }
+
+  .hero-title {
+      font-size: 2rem;
+  }
+
+  .section-title {
+      font-size: 1.8rem;
+  }
+
+  .tutorials-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tutorial-card {
+      width: 100%;
+      max-width: 320px;
+  }
+
+  /* Mobile Dropdown Adjustment */
+  .dropdown-content {
+      min-width: 180px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack vertically on smaller screens */
+  }
+  .faq-heading {
+    font-size: 12px;
+  }
+
+  .faq-subheading {
+    font-size: 20px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}
+
+/* Hide all the controls, if you want custom controls later */
+.video-player::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-player::-moz-media-controls {
+  display: none !important;
+}
+
+.video-player::media-controls {
+  display: none !important;
+}
+
+/* Optional: Custom controls could go here */
+.video-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
