@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "42655e0b-3580-4de6-8d8b-073ff00c35cb",
+		"name": "Reviews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39651046"
+	},
+	"item": [
+		{
+			"name": "register_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"admin\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/pawan.s/Pictures/Camera Roll/WIN_20241005_11_15_10_Pro.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:5000/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "reviews Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/reviews"
+			},
+			"response": []
+		},
+		{
+			"name": "reviews edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "stars",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:5000/api/reviews/6735d0c6245bfbe5feee4946"
+			},
+			"response": []
+		},
+		{
+			"name": "reviews delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/api/reviews/6735dbf06721f55f94aa1dc4"
+			},
+			"response": []
+		},
+		{
+			"name": "reviews post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "stars",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": " \"Great content!\"",
+							"type": "text"
+						},
+						{
+							"key": "studentsWatched",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:5000/api/reviews"
+			},
+			"response": []
+		}
+	]
+}
